@@ -1,0 +1,41 @@
+local set = vim.opt
+-- set.incsearch = true
+-- set.hlsearch = true
+set.ignorecase = true
+set.smartcase = true
+set.number = true
+-- set.relativenumber = true
+-- set.hidden = true
+-- set.ruler = true
+set.cursorline = true
+set.confirm = true
+set.showmode = false
+set.showcmd = true
+set.cmdheight = 2
+set.laststatus = 2
+set.timeoutlen = 300
+set.updatetime = 250
+set.scrolloff = 2
+-- set.autoread = true
+-- set.lazyredraw = true
+set.mouse = "a"
+set.clipboard = "unnamedplus"
+set.swapfile = false
+set.undofile = true
+set.backup = false
+set.wrap = false
+set.splitbelow = true
+set.splitright = true
+
+-- set.smarttab = true
+set.tabstop = 4
+set.softtabstop = 4
+set.shiftwidth = 4
+set.expandtab = true
+set.smartindent = true
+-- set.autoindent = true
+set.breakindent = true
+
+vim.g.mapleader = " "
+
+set.guifont = "JetBrains Mono Nerd Font:h13"

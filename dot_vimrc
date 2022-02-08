@@ -1,0 +1,94 @@
+"
+"   ~/.vimrc
+"
+" Alessio Rapisarda
+
+" vim-plug
+" Install vim-plug if not found
+if empty(glob('~/.vim/autoload/plug.vim'))
+  silent !curl -fLo ~/.vim/autoload/plug.vim --create-dirs
+    \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+endif
+
+" Run PlugInstall if there are missing plugins
+autocmd VimEnter * if len(filter(values(g:plugs), '!isdirectory(v:val.dir)'))
+  \| PlugInstall --sync | source $MYVIMRC
+\| endif
+
+call plug#begin()
+Plug 'tpope/vim-sensible'
+Plug 'tpope/vim-fugitive'
+Plug 'tpope/vim-surround'
+Plug 'tpope/vim-repeat'
+Plug 'itchyny/lightline.vim'
+Plug 'srcery-colors/srcery-vim'
+Plug 'tomasr/molokai'
+Plug 'sainnhe/sonokai'
+Plug 'sainnhe/gruvbox-material'
+Plug 'ryanoasis/vim-devicons'
+Plug 'preservim/nerdtree'
+Plug 'sheerun/vim-polyglot'
+Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+Plug 'junegunn/fzf.vim'
+Plug 'junegunn/goyo.vim'
+call plug#end()
+
+" Colors
+if (has("termguicolors"))
+    set termguicolors
+endif
+if !has('gui_running')
+  set t_Co=256
+endif
+let &t_ut=''
+set background=dark
+
+" Available values: 'hard', 'medium'(default), 'soft'
+let g:gruvbox_material_background = 'medium'
+" Available values: `'default'`, `'mix'`, `'original'`
+let g:gruvbox_material_palette = 'default'
+
+" Available values: `'default'`, `'atlantis'`, `'andromeda'`, `'shusia'`, `'maia'`, `'espresso'`
+let g:sonokai_style = 'default'
+
+colorscheme sonokai
+
+let g:lightline = {'colorscheme' : 'sonokai'}
+
+" Make alacritty display syntax correctly.
+if $TERM == 'alacritty'
+    let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
+    let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
+endif
+
+set hlsearch
+set ignorecase
+set smartcase
+set number
+set visualbell
+set t_vb=
+set cursorline
+set confirm
+set noshowmode
+set showcmd
+set cmdheight=2
+set hidden
+se mouse+=a
+if has('unnamedplus')
+  set clipboard=unnamed,unnamedplus
+endif
+
+set tabstop=8
+set softtabstop=4
+set shiftwidth=4
+set expandtab
+
+let mapleader = " "
+
+noremap <Leader>g :Goyo<CR>
+noremap <Leader>f :Files<CR>
+noremap <Leader>n :NERDTreeToggle<CR>
+noremap <Leader>w :w<CR>
+noremap <Leader>` :Marks<CR>
+noremap <Leader>b :Buffers<CR>
+noremap <Leader>R :Rg<CR>

@@ -1,0 +1,23 @@
+#
+# ~/.aliases
+#
+# Alessio Rapisarda
+
+alias home='cd ~'
+alias bd='cd "$OLDPWD"'
+
+alias docker-reset='sudo docker-compose down && sudo docker-compose pull && sudo docker-compose up -d'
+
+alias cp='cp -i'
+alias mv='mv -i'
+alias rm='rm -iv'
+alias rmd='rm -rf'
+alias mkdir='mkdir -pv'
+alias resource='source ~/.bash_profile'
+alias v='nvim'
+alias vi='vim'
+
+alias lisa='ls -lisa'
+alias liga='exa -liga'
+
+[ "$TERM" = xterm-kitty ] && alias ssh='kitty +kitten ssh'
