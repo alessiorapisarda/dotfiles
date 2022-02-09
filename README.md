@@ -1,5 +1,5 @@
 # Dotfiles
-![Screenshot](https://ibb.co/fMzggRC)
+![Screenshot](https://i.ibb.co/F6LrrvB/Screenshot-from-2022-02-08-22-30-01.png)
 
 ## Installation
 Requires [chezmoi](https://www.chezmoi.io/).
