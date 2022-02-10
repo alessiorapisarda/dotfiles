@@ -36,6 +36,7 @@ extract () {
 				*.rar)       rar x $archive       ;;
 				*.gz)        gunzip $archive      ;;
 				*.tar)       tar xvf $archive     ;;
+                *.tbz)      tar xvjf $archive    ;;
 				*.tbz2)      tar xvjf $archive    ;;
 				*.tgz)       tar xvzf $archive    ;;
 				*.zip)       unzip $archive       ;;
@@ -60,6 +61,9 @@ export FZF_DEFAULT_COMMAND='ag -f -p ~/.gitignore -g ""'
 # Starship
 eval "$(starship init bash)"
 
+if [ -z "$SSH_AUTH_SOCK" ] && [ -n "grep microsoft /proc/version" ]; then
+    eval `ssh-agent -s` &>/dev/null
+fi
 
 # BEGIN_KITTY_SHELL_INTEGRATION
 if test -n "$KITTY_INSTALLATION_DIR" -a -e "$KITTY_INSTALLATION_DIR/shell-integration/bash/kitty.bash"; then source "$KITTY_INSTALLATION_DIR/shell-integration/bash/kitty.bash"; fi
