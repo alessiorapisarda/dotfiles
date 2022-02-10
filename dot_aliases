@@ -19,5 +19,3 @@ alias vi='vim'
 
 alias lisa='ls -lisa'
 alias liga='exa -liga'
-
-[ "$TERM" = xterm-kitty ] && alias ssh='kitty +kitten ssh'

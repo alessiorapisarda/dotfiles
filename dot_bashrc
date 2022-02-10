@@ -61,8 +61,14 @@ export FZF_DEFAULT_COMMAND='ag -f -p ~/.gitignore -g ""'
 # Starship
 eval "$(starship init bash)"
 
+# Autostart SSH-Agent if on WSL
 if [ -z "$SSH_AUTH_SOCK" ] && [ -n "grep microsoft /proc/version" ]; then
     eval `ssh-agent -s` &>/dev/null
+fi
+
+# Alias ssh if using kitty
+if [ "$TERM" = xterm-kitty ]; then
+    alias ssh='kitty +kitten ssh'
 fi
 
 # BEGIN_KITTY_SHELL_INTEGRATION
