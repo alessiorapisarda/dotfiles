@@ -33,7 +33,6 @@ packer.init({
             return require("packer.util").float({ border = "rounded" })
         end,
     },
-    compile_path = vim.fn.stdpath("config") .. "/lua/packer_compiled.lua",
 })
 
 return packer.startup(function(use)
@@ -50,6 +49,7 @@ return packer.startup(function(use)
     use("tpope/vim-repeat")
     use("tpope/vim-fugitive")
     use("moll/vim-bbye")
+    use("folke/which-key.nvim")
     use("nvim-telescope/telescope.nvim")
     use({ "nvim-telescope/telescope-fzf-native.nvim", run = "make" })
     use("nvim-telescope/telescope-file-browser.nvim")
@@ -76,6 +76,8 @@ return packer.startup(function(use)
     use("sainnhe/sonokai")
     use("sainnhe/gruvbox-material")
     use("shaunsingh/moonlight.nvim")
+    use("rebelot/kanagawa.nvim")
+    use("ful1e5/onedark.nvim")
     use("marko-cerovac/material.nvim")
     use("catppuccin/nvim")
 
