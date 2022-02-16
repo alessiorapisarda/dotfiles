@@ -27,10 +27,10 @@ set.wrap = false
 set.splitbelow = true
 set.splitright = true
 
--- set.smarttab = true
--- set.tabstop = 4
--- set.softtabstop = 4
--- set.shiftwidth = 4
+set.smarttab = true
+set.tabstop = 4
+set.softtabstop = 4
+set.shiftwidth = 4
 set.expandtab = true
 set.smartindent = true
 -- set.autoindent = true

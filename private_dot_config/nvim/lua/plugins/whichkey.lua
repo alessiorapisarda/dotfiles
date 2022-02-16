@@ -79,9 +79,9 @@ local opts = {
 }
 
 local mappings = {
+    ["a"] = { "<cmd>Alpha<cr>", "Dashboard" },
     ["s"] = { "<cmd>w<cr>", "Save" },
     ["q"] = { "<cmd>q!<cr>", "Quit" },
-    ["a"] = { "<cmd>Alpha<cr>", "Dashboard" },
 
     t = {
         name = "NvimTree",
@@ -162,9 +162,11 @@ local mappings = {
             "<cmd>lua vim.lsp.diagnostic.goto_prev()<cr>",
             "Previous Diagnostic",
         },
+        K = { "<cmd>lua vim.lsp.buf.hover()<cr>", "Hover" },
         l = { "<cmd>lua vim.lsp.codelens.run()<cr>", "CodeLens Action" },
         q = { "<cmd>lua vim.lsp.diagnostic.set_loclist()<cr>", "Quickfix" },
         r = { "<cmd>lua vim.lsp.buf.rename()<cr>", "Rename" },
+        R = { "<cmd>lua vim.lsp.buf.references()<cr>", "References" },
         s = { "<cmd>Telescope lsp_document_symbols<cr>", "Document Symbols" },
         S = {
             "<cmd>Telescope lsp_dynamic_workspace_symbols<cr>",
