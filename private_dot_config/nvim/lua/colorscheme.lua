@@ -94,22 +94,66 @@ end
 -- moonlight.set()
 
 -- Catppuccin
-require("catppuccin").setup({
+catppuccin.setup({
     transparent_background = false,
+    term_colors = false,
+    styles = {
+        comments = "italic",
+        functions = "italic",
+        keywords = "italic",
+        strings = "NONE",
+        variables = "italic",
+    },
     integrations = {
-        telescope = true,
-        indent_blankline = {
+        treesitter = true,
+        native_lsp = {
             enabled = true,
-            colored_indent_levels = true,
+            virtual_text = {
+                errors = "italic",
+                hints = "italic",
+                warnings = "italic",
+                information = "italic",
+            },
+            underlines = {
+                errors = "underline",
+                hints = "underline",
+                warnings = "underline",
+                information = "underline",
+            },
         },
+        lsp_trouble = true,
+        cmp = true,
+        lsp_saga = false,
+        gitgutter = false,
+        gitsigns = true,
+        telescope = true,
         nvimtree = {
             enabled = true,
-            show_root = true,
+            show_root = false,
+            transparent_panel = false,
         },
+        neotree = {
+            enabled = false,
+            show_root = false,
+            transparent_panel = false,
+        },
+        which_key = true,
+        indent_blankline = {
+            enabled = true,
+            colored_indent_levels = false,
+        },
+        dashboard = false,
+        neogit = false,
+        vim_sneak = false,
+        fern = false,
+        barbar = false,
         bufferline = true,
-        ts_rainbow = true,
+        markdown = false,
         lightspeed = true,
-        cmp = true,
+        ts_rainbow = false,
+        hop = false,
+        notify = false,
+        telekasten = false,
     },
 })
 vim.cmd([[colorscheme catppuccin]])
