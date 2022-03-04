@@ -7,26 +7,31 @@ local function on_attach(client, bufnr)
     -- Set up buffer-local keymaps (vim.api.nvim_buf_set_keymap()), etc.
 end
 
--- Register a handler that will be called for all installed servers.
--- Alternatively, you may also register handlers on specific server instances instead (see example below).
+local enhance_server_opts = {
+    ["sumneko_lua"] = function(opts)
+        opts.settings = {
+            diagnostics = {
+                globals = { "vim" },
+            },
+            format = {
+                enable = false,
+            },
+            telemetry = {
+                enable = false,
+            },
+        }
+    end,
+}
+
 lsp_installer.on_server_ready(function(server)
-    local default_opts = {
+    local opts = {
         on_attach = on_attach,
     }
 
-    local server_opts = {
-        ["sumneko_lua"] = function()
-            default_opts.settings = {
-                Lua = {
-                    diagnostics = {
-                        globals = { "vim" },
-                    },
-                },
-            }
-        end,
-    }
+    if enhance_server_opts[server.name] then
+        -- Enhance the default opts with the server-specific ones
+        enhance_server_opts[server.name](opts)
+    end
 
-    -- Use the server's custom settings, if they exist, otherwise default to the default options
-    local server_options = server_opts[server.name] and server_opts[server.name]() or default_opts
-    server:setup(server_options)
+    server:setup(opts)
 end)
