@@ -1,0 +1,5 @@
+[tools]
+java = "latest"
+"llama.cpp" = { version = "latest", version_prefix = "b" }
+neovim = "latest"
+pi = "latest"

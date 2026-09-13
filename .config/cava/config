@@ -1,0 +1,17 @@
+[color]
+theme = "noctalia"
+background = '#1a110e'
+foreground = '#ffb599'
+
+gradient = 1
+gradient_color_1 = '#71361d'
+gradient_color_2 = '#ffb599'
+gradient_color_3 = '#ffdbce'
+
+horizontal_gradient = 0
+horizontal_gradient_color_1 = '#71361d'
+horizontal_gradient_color_2 = '#ffb599'
+horizontal_gradient_color_3 = '#ffdbce'
+horizontal_gradient_color_4 = '#ffb599'
+horizontal_gradient_color_5 = '#71361d'
+

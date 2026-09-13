@@ -1,0 +1,32 @@
+{
+  "theme": "noctalia",
+  "lastChangelogVersion": "0.85.1",
+  "terminal": {
+    "showTerminalProgress": true
+  },
+  "enableInstallTelemetry": false,
+  "tuiMode": "regular",
+  "packages": [
+    "git:github.com/huggingface/pi-llama",
+    {
+      "source": "git:github.com/DietrichGebert/ponytail",
+      "skills": [
+        "ponytail",
+        "-skills/ponytail/SKILL.md",
+        "-skills/ponytail-audit/SKILL.md",
+        "-skills/ponytail-debt/SKILL.md",
+        "-skills/ponytail-gain/SKILL.md",
+        "-skills/ponytail-help/SKILL.md",
+        "-skills/ponytail-review/SKILL.md"
+      ],
+      "extensions": [
+        "-pi-extension/index.js"
+      ]
+    },
+    "npm:pi-mcp-adapter",
+    "npm:pi-web-access"
+  ],
+  "skills": [
+    "+skills/caveman/SKILL.md"
+  ]
+}
