@@ -1,5 +1,10 @@
 [tools]
+herdr = "latest"
 java = "latest"
+lazygit = "latest"
 "llama.cpp" = { version = "latest", version_prefix = "b" }
 neovim = "latest"
+npm = "latest"
 pi = "latest"
+ruby = "latest"
+usage = "latest"
