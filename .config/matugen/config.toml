@@ -1,11 +1,5 @@
 [config]
 
-[templates.alacritty]
-input_path = "./templates/alacritty/alacritty.toml"
-output_path = "~/.config/alacritty/themes/noctalia.toml"
-post_hook = "bash ~/.config/matugen/templates/alacritty/apply.sh"
-undo_hook = "bash ~/.config/matugen/templates/alacritty/undo.sh"
-
 [templates.bat]
 input_path = "./templates/bat/bat.tmTheme"
 output_path = "~/.config/bat/themes/noctalia.tmTheme"
@@ -92,6 +86,11 @@ output_path = "~/.config/mango/noctalia.conf"
 post_hook = "bash ~/.config/matugen/templates/mango/apply.sh"
 undo_hook = "bash ~/.config/matugen/templates/mango/undo.sh"
 
+# [templates.nvim-base16]
+# input_path = "./templates/neovim/matugen-template.lua"
+# output_path = "~/.config/nvim/lua/matugen.lua"
+# post_hook = "bash ~/.config/matugen/templates/neovim/apply.sh'"
+
 [templates.niri]
 input_path = "./templates/niri/niri.kdl"
 output_path_dynamic = "~/.config/matugen/templates/niri/apply.sh output"
@@ -101,6 +100,11 @@ undo_hook = "bash ~/.config/matugen/templates/niri/undo.sh"
 [templates.opencode]
 input_path = "./templates/opencode/opencode.json"
 output_path = "~/.config/opencode/themes/matugen.json"
+
+[templates.obsidian]
+input_path = "./templates/obsidian/obsidian.css"
+output_path_dynamic = "bash ~/.config/matugen/templates/obsidian/apply.sh output"
+post_hook = "bash ~/.config/matugen/templates/obsidian/apply.sh apply"
 
 [templates.pi-agent]
 input_path = "./templates/pi-agent/pi-theme.json"
@@ -141,15 +145,15 @@ post_hook = "bash ~/.config/matugen/templates/zathura/apply.sh"
 # input_path = "./templates/yazi/yazi.tmTheme"
 # output_path = "~/.config/yazi/flavors/noctalia.yazi/tmtheme.xml"
 
-# [templates.zen_browser_chrome]
-# input_path = "./templates/zen-browser/zen-userChrome.css"
-# output_path = "~/.config/noctalia/zen-browser/zen-userChrome.css"
-# post_hook = "bash ~/.config/matugen/templates/zen-browser/apply.sh"
+[templates.zen_browser_chrome]
+input_path = "./templates/zen-browser/zen-userChrome.css"
+output_path = "~/.cache/noctalia/zen-browser/zen-userChrome.css"
+post_hook = "bash ~/.config/matugen/templates/zen-browser/apply.sh"
 
-# [templates.zen_browser_content]
-# input_path = "./templates/zen-browser/zen-userContent.css"
-# output_path = "~/.config/noctalia/zen-browser/zen-userContent.css"
-# post_hook = "bash ~/.config/matugen/templates/zen-browser/apply.sh"
+[templates.zen_browser_content]
+input_path = "./templates/zen-browser/zen-userContent.css"
+output_path = "~/.cache/noctalia/zen-browser/zen-userContent.css"
+post_hook = "bash ~/.config/matugen/templates/zen-browser/apply.sh"
 
 [templates.discord_midnight_vencord]
 input_path = "./templates/discord/discord-midnight.css"

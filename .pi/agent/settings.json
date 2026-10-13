@@ -1,6 +1,6 @@
 {
   "theme": "noctalia",
-  "lastChangelogVersion": "0.85.1",
+  "lastChangelogVersion": "1.1.0",
   "terminal": {
     "showTerminalProgress": true
   },
@@ -23,10 +23,18 @@
         "-pi-extension/index.js"
       ]
     },
-    "npm:pi-mcp-adapter",
+    {
+      "source": "npm:pi-mcp-adapter",
+      "extensions": [
+        "-index.ts"
+      ]
+    },
     "npm:pi-web-access"
   ],
   "skills": [
     "+skills/caveman/SKILL.md"
+  ],
+  "extensions": [
+    "+builtin:mcp"
   ]
 }
