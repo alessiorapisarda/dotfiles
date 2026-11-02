@@ -1,4 +1,5 @@
 [tools]
+fd = "latest"
 herdr = "latest"
 java = "latest"
 lazygit = "latest"

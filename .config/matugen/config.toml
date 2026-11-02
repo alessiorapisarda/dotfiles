@@ -3,7 +3,7 @@
 [templates.bat]
 input_path = "./templates/bat/bat.tmTheme"
 output_path = "~/.config/bat/themes/noctalia.tmTheme"
-post_hook = "~/.config/matugen/templates/bat/apply.sh'"
+post_hook = "~/.config/matugen/templates/bat/apply.sh"
 
 [templates.btop]
 input_path = "./templates/btop/btop.theme"
@@ -57,7 +57,7 @@ undo_hook = "bash ~/.config/matugen/templates/gtk/undo-gtk4.sh"
 input_path = "./templates/kde/kcolorscheme.colors"
 output_path = "~/.config/color-schemes/noctalia.colors"
 post_action = "kde-color-scheme"
-undo_hook = "bash ~/.config/matugen/templates/kde/undo.sh'"
+undo_hook = "bash ~/.config/matugen/templates/kde/undo.sh"
 
 [templates.helix]
 input_path = "./templates/helix/helix.toml"
@@ -66,8 +66,8 @@ undo_hook = "bash ~/.config/matugen/templates/helix/undo.sh"
 
 [templates.herdr]
 input_path = "./templates/herdr/herdr-colors.toml"
-output_path = "~/.config/herdr/matugen-colors.toml"
-post_hook = "bash ~/.config/matugen/templates/herdr/apply.sh'"
+output_path = "~/.config/herdr/noctalia-colors.toml"
+post_hook = "bash ~/.config/matugen/templates/herdr/apply.sh"
 
 [templates.kitty]
 input_path = "./templates/kitty/kitty.conf"
@@ -78,7 +78,7 @@ undo_hook = "bash ~/.config/matugen/templates/kitty/undo.sh"
 [templates.lazygit]
 input_path = "./templates/lazygit/lazygit.yml"
 output_path = "~/.config/lazygit/themes/noctalia.yml"
-post_hook = "bash ~/.config/matugen/templates/lazygit/apply.sh'"
+post_hook = "bash ~/.config/matugen/templates/lazygit/apply.sh"
 
 [templates.mango]
 input_path = "./templates/mango/mango.conf"
@@ -89,11 +89,11 @@ undo_hook = "bash ~/.config/matugen/templates/mango/undo.sh"
 # [templates.nvim-base16]
 # input_path = "./templates/neovim/matugen-template.lua"
 # output_path = "~/.config/nvim/lua/matugen.lua"
-# post_hook = "bash ~/.config/matugen/templates/neovim/apply.sh'"
+# post_hook = "bash ~/.config/matugen/templates/neovim/apply.sh"
 
 [templates.niri]
 input_path = "./templates/niri/niri.kdl"
-output_path_dynamic = "~/.config/matugen/templates/niri/apply.sh output"
+output_path_dynamic = "bash ~/.config/matugen/templates/niri/apply.sh output"
 post_hook = "bash ~/.config/matugen/templates/niri/apply.sh apply"
 undo_hook = "bash ~/.config/matugen/templates/niri/undo.sh"
 
