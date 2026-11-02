@@ -4,7 +4,7 @@
 # https://docs.noctalia.dev/umbriel/configuration/#general
 #
 [general]
-autostart = ["noctalia", "kitty"]
+autostart = ["noctalia", "kitty", "vicinae server"]
 # xwayland = false
 # Sharp X11 apps and games on scaled outputs; they see physical resolutions.
 # xwayland_native_resolution = true
@@ -26,9 +26,9 @@ autostart = ["noctalia", "kitty"]
 # `umbriel outputs`.
 # https://docs.noctalia.dev/umbriel/configuration/#events
 #
-# [events]
-# lid_close = "umbriel msg output-disable eDP-1"
-# lid_open = "umbriel msg output-enable eDP-1"
+[events]
+lid_close = "umbriel msg output-disable eDP-1"
+lid_open = "umbriel msg output-enable eDP-1"
 
 # ==============================================================================
 # Screencast

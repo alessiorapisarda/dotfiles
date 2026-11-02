@@ -8,10 +8,11 @@
 
 # Applications and session
 "Mod+Return" = { action = "spawn kitty", repeat = false }
-"Mod" = "spawn noctalia msg panel-toggle launcher"
+"Mod" = { action = "spawn vicinae toggle" }
 "Mod+Q" = { action = "window-close", repeat = false }
-"Mod+Escape" = "session-quit"
+"Mod+Escape" = "spawn noctalia msg panel-toggle session"
 "Mod+Shift+Escape" = { action = "shortcuts-inhibit-toggle", allow_when_inhibited = true, repeat = false }
+
 
 # Media, volume and brightness keys from any input device, routed through the
 # Noctalia shell so its OSDs show. Safe while the session is locked.
@@ -49,10 +50,11 @@
 "Mod+Ctrl+F" = { action = "window-toggle-maximize", repeat = false }
 "Mod+R" = "window-cycle-primary-extent"
 "Mod+Shift+R" = "window-cycle-primary-extent-back"
-"Mod+Comma" = "window-consume-left"
-"Mod+Period" = "window-consume-right"
+"Mod+Comma" = "window-consume-or-expel-left"
+"Mod+Period" = "window-consume-or-expel-right"
 "Mod+Ctrl+Comma" = "window-consume-from-left"
 "Mod+Ctrl+Period" = "window-consume-from-right"
+"Mod+C" = "column-center"
 # Needs layout.mode = "dwindle".
 # "Mod+Alt+T" = "layout-toggle-split"
 "Mod+W" = { action = "column-toggle-tabbed", repeat = false }
@@ -61,6 +63,7 @@
 "Mod+WheelUp" = "window-focus-left"
 "Mod+WheelDown" = "window-focus-right"
 "Mod+O" = { action = "overview-toggle", repeat = false }
+"Mod+A" = "workspace-set-layout toggle"
 
 # Workspaces
 # Move the whole workspace, retaining its name, layout, and windows.
@@ -92,3 +95,8 @@
 "Mod+Ctrl+Space" = { action = "window-restore-from-scratchpad", repeat = false }
 "Mod+Tab" = "scratchpad-focus-next"
 
+# Noctalia
+
+"Mod+V" = "spawn noctalia msg panel-toggle clipboard"
+"Mod+S" = "spawn noctalia msg settings-toggle"
+"Alt+Tab" = "spawn noctalia msg window-switcher hold"
