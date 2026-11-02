@@ -15,12 +15,13 @@ abbr g git
 abbr y yazi
 abbr ff fastfetch
 abbr p paru
-abbr s shelly
-abbr h herdr
 abbr v nvim
 abbr sv sudoedit
+abbr s shelly
+abbr h herdr
+abbr x zmx
 
-if status is-interactive
-    # Start keychain with a 120-minute timeout (7200 seconds)
-    keychain --timeout 7200 --eval --quiet | source
-end
+# if status is-interactive
+#     # Start keychain with a 120-minute timeout (7200 seconds)
+#     keychain --timeout 7200 --eval --quiet | source
+# end

@@ -80,6 +80,12 @@ input_path = "./templates/lazygit/lazygit.yml"
 output_path = "~/.config/lazygit/themes/noctalia.yml"
 post_hook = "bash ~/.config/matugen/templates/lazygit/apply.sh"
 
+[templates.lazyvim]
+input_path = "./templates/lazyvim/noctalia.lua"
+output_path = "~/.config/nvim/colors/noctalia.lua"
+post_hook = "bash ~/.config/matugen/templates/lazyvim/apply.sh"
+requires_path = "~/.config/nvim/lazyvim.json"
+
 [templates.mango]
 input_path = "./templates/mango/mango.conf"
 output_path = "~/.config/mango/noctalia.conf"
@@ -144,6 +150,11 @@ post_hook = "bash ~/.config/matugen/templates/zathura/apply.sh"
 # [templates.yazi-syntax]
 # input_path = "./templates/yazi/yazi.tmTheme"
 # output_path = "~/.config/yazi/flavors/noctalia.yazi/tmtheme.xml"
+
+[templates.zellij]
+input_path = "./templates/zellij/zellij.kdl"
+output_path = "~/.config/zellij/themes/noctalia.kdl"
+post_hook = "touch ~/.config/zellij/config.kdl" # trigger config auto-reload
 
 [templates.zen_browser_chrome]
 input_path = "./templates/zen-browser/zen-userChrome.css"
